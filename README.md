@@ -5,6 +5,4 @@ Shannon entropy rescaling using Shape-Constrained Splines
 
 "MS" contains the R code to reproduce the analysis (and the corresponding graphics) on the mice study (MS).
 
-Tu run the code it is sufficient to \n
-	\t1) download the entire folder(s)
-	\t2) run the "main.R" code located in the "./source/" folder.
+To reproduce the analyses it is sufficient to download the entire folder(s) and run the "main.R" code located in the "./source/" folder.
