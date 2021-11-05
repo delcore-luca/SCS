@@ -547,10 +547,12 @@ yX_JY$MOI <- as.numeric(yX_JY$MOI)
 yX_JY[which(yX_JY$MOI == 0),]$MOI <- .1
 
 ## Table S.1
-xtable(x = summary(yX_JY[, c("DNAngUsed", "VCN" ,"seqDepth", "MOI")]))
+xtable(x = summary(yX_JY[, c("DNAngUsed", "MOI", "VCN", "nIS" ,"seqDepth")]))
 # xtable(yX_JY[, c("DNAngUsed", "VCN", "MOI", "nIS")])
 ## Table S.2
-xtable(aggregate(nIS~DNAngUsed+VCN+MOI, yX_JY, sum))
+xtable(aggregate(cbind(nIS, seqDepth)~DNAngUsed+MOI+VCN, yX_JY, sum))
+## Table S.3
+print(xtable(yX_JY[, c("DNAngUsed", "MOI", "VCN", "nIS" ,"seqDepth")]), include.rownames=FALSE)
 
 
 save.image(paste(currOutPath, "results.RData", sep = ""))
